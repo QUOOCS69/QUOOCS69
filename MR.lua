@@ -46,35 +46,25 @@ local FurnituresCooldowns = {}
 
 -- Settings Variables
 local FastWaiter = false
-local HyperFood = false
-local AutoGift = false
-local FastOrder = false
+local HyperFood = true
+local AutoGift = true
+local FastOrder = true
 local FastNPC = false
-local TeleportNPC = false
+local TeleportNPC = true
 local NPCSpeed = 100
-local AutoInteract = false
-local AutoBuyWorkers = false
-local AutoBlacklist = false
+local AutoInteract = true
+local AutoBuyWorkers = true
+local AutoBlacklist = true
 local AutoCloseRestaurant = false
 local AutoCloseEvery = 600
 local LastTimeClose = 0
 
 --// Force better customer
-local ForceCustomers = false
-local ForceVIP = false
-local ForcePirate = false
-local ForceYoutuber = false
-local ForceHeadless = false
-local ForceCorruptedVIP = false
-local ForceSanta = false
-local ForceElf = false
-local ForceLifeguard = false
-local ForceAlien = false
-local ForcePrincess = false
-local ForceSuperHero = false
+local ForceCustomers = true
+local ForceAlien = true
 
 local InstantCook = false
-local InstantEat = false
+local InstantEat = true
 local InstantWash = false
 
 local IS_DEV_MODE = true
@@ -2178,3 +2168,4 @@ VirtualUser:ClickButton2(Vector2.new())
 end)
 
 warn("Anti-Afk has Loaded")
+
