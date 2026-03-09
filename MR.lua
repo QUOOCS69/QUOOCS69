@@ -1,3 +1,5 @@
+if not game:IsLoaded() then game.Loaded:Wait() end
+if game.PlaceId ~= 4490140733 then return end
 
 local HttpService = game:GetService("HttpService")
 local Players = game:GetService("Players")
@@ -1081,18 +1083,20 @@ end)
 --// Rayfield Initialization
 -------------------------//
 getgenv().SecureMode = true
-local Rayfield = loadstring(game:HttpGet('https://raw.githubusercontent.com/rafacasari/Rayfield/main/source'))()
+local Rayfield = loadstring(game:HttpGet('https://sirius.menu/rayfield'))()
 assert(Rayfield, "Oopps! Rayfield has not been loaded. Maybe try re-joining?") 
 
 local Window = Rayfield:CreateWindow({
    Name = "SCRIPT BY RAFA | REWRITE BY QUOOCS",
    LoadingTitle = "My Restaurant!",
    LoadingSubtitle = "by Rafa (discord.gg/MilkUp)",
+   Icon = 0,
    ConfigurationSaving = {
       Enabled = true,
       FolderName = nil,
       FileName = "MyRestaurant"
-   }
+   },
+   KeySystem = false
 })
 
 -------------------------//
