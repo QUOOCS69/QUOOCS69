@@ -1,5 +1,4 @@
-if not game:IsLoaded() then game.Loaded:Wait() end
-if game.PlaceId ~= 4490140733 then return end
+
 
 local HttpService = game:GetService("HttpService")
 local Players = game:GetService("Players")
