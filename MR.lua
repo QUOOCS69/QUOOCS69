@@ -45,7 +45,7 @@ local Slots = {"57"}
 local FurnituresCooldowns = {}
 
 -- Settings Variables
-local FastWaiter = false
+local FastWaiter = true
 local HyperFood = true
 local AutoGift = false
 local FastOrder = true
@@ -1115,7 +1115,7 @@ local FastOrderToggle = FarmTab:CreateToggle({
 
 local FastWaiterToggle = FarmTab:CreateToggle({
    Name = "Instant Waiter",
-   CurrentValue = false,
+   CurrentValue = true,
    Flag = "FastWaiter",
    Callback = function(Value)
 		FastWaiter = Value
@@ -2079,5 +2079,6 @@ VirtualUser:ClickButton2(Vector2.new())
 end)
 
 warn("Anti-Afk has Loaded")
+
 
 
