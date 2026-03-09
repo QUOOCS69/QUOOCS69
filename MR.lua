@@ -47,14 +47,14 @@ local FurnituresCooldowns = {}
 -- Settings Variables
 local FastWaiter = false
 local HyperFood = true
-local AutoGift = true
+local AutoGift = false
 local FastOrder = true
 local FastNPC = false
-local TeleportNPC = true
+local TeleportNPC = false
 local NPCSpeed = 100
-local AutoInteract = true
-local AutoBuyWorkers = true
-local AutoBlacklist = true
+local AutoInteract = false
+local AutoBuyWorkers = false
+local AutoBlacklist = false
 local AutoCloseRestaurant = false
 local AutoCloseEvery = 600
 local LastTimeClose = 0
@@ -1133,7 +1133,7 @@ local InstantCookToggle = FarmTab:CreateToggle({
 
 local InstantEatToggle = FarmTab:CreateToggle({
 	Name = "Instant Eat",
-	CurrentValue = false,
+	CurrentValue = true,
 	Flag = "InstantEat",
 	Callback = function(Value) 
 		InstantEat = Value
@@ -1161,7 +1161,7 @@ local OptimizedModeToggle = FarmTab:CreateToggle({
 
 local HyperFoodToggle = FarmTab:CreateToggle({
    Name = "Hyper Food",
-   CurrentValue = false,
+   CurrentValue = true,
    Flag = "HyperFood",
    Callback = function(Value)
 		HyperFood = Value
@@ -1171,7 +1171,7 @@ local HyperFoodToggle = FarmTab:CreateToggle({
 FarmTab:CreateParagraph({ Title="Force Best Customer", Content = "This option will force the best customer for each chair like:\nBeach chair is Lifeguard, Alien Throne is Alien, [...]\nThis is extremely efficient with Alien ($936k per Alien)"})
 local ForceCustomerToggle = FarmTab:CreateToggle({
    Name = "Force Best Customer",
-   CurrentValue = false,
+   CurrentValue = true,
    Flag = "ForceCustomers",
    Callback = function(Value)
 		ForceCustomers = Value
@@ -1179,103 +1179,14 @@ local ForceCustomerToggle = FarmTab:CreateToggle({
 })
 
 FarmTab:CreateToggle({
-   Name = "Force Royal VIP",
-   CurrentValue = false,
-   Flag = "ForceVIP",
-   Callback = function(Value)
-		ForceVIP = Value
-   end
-})
-
-FarmTab:CreateToggle({
-   Name = "Force Pirate",
-   CurrentValue = false,
-   Flag = "ForcePirate",
-   Callback = function(Value)
-		ForcePirate = Value
-   end
-})
-
-FarmTab:CreateToggle({
-   Name = "Force Youtuber",
-   CurrentValue = false,
-   Flag = "ForceYoutuber",
-   Callback = function(Value)
-		ForceYoutuber = Value
-   end
-})
-
-FarmTab:CreateToggle({
-   Name = "Force Headless",
-   CurrentValue = false,
-   Flag = "ForceHeadless",
-   Callback = function(Value)
-		ForceHeadless = Value
-   end
-})
-
-FarmTab:CreateToggle({
-   Name = "Force Corrupted VIP",
-   CurrentValue = false,
-   Flag = "ForceCorruptedVIP",
-   Callback = function(Value)
-		ForceCorruptedVIP = Value
-   end
-})
-
-FarmTab:CreateToggle({
-   Name = "Force Santa",
-   CurrentValue = false,
-   Flag = "ForceSanta",
-   Callback = function(Value)
-		ForceSanta = Value
-   end
-})
-
-FarmTab:CreateToggle({
-   Name = "Force Elf",
-   CurrentValue = false,
-   Flag = "ForceElf",
-   Callback = function(Value)
-		ForceElf = Value
-   end
-})
-
-FarmTab:CreateToggle({
-   Name = "Force Lifeguard",
-   CurrentValue = false,
-   Flag = "ForceLifeguard",
-   Callback = function(Value)
-		ForceLifeguard = Value
-   end
-})
-
-FarmTab:CreateToggle({
    Name = "Force Alien",
-   CurrentValue = false,
+   CurrentValue = true,
    Flag = "ForceAlien",
    Callback = function(Value)
 		ForceAlien = Value
    end
 })
 
-FarmTab:CreateToggle({
-   Name = "Force Princess",
-   CurrentValue = false,
-   Flag = "ForcePrincess",
-   Callback = function(Value)
-		ForcePrincess = Value
-   end
-})
-
-FarmTab:CreateToggle({
-   Name = "Force Superhero",
-   CurrentValue = false,
-   Flag = "ForceSuperHero",
-   Callback = function(Value)
-		ForceSuperHero = Value
-   end
-})
 
 
 local TeleportTab = Window:CreateTab("Teleport")
@@ -2168,4 +2079,5 @@ VirtualUser:ClickButton2(Vector2.new())
 end)
 
 warn("Anti-Afk has Loaded")
+
 
